@@ -5,6 +5,7 @@ import {selectUsers, getUsers} from "../search/searchSlice";
 import styles from './user.module.css';
 import {UserCard} from '../../component/userCard'
 import Spinner from 'react-bootstrap/Spinner';
+import {ErrorCard} from '../../component/errorCard'
 
 
 
@@ -35,7 +36,7 @@ export function User() {
     if(!error){
       return <UserCard element={users[name]}/>
     }else{
-      return <div>error</div>
+      return <ErrorCard/>
     }
   }
 
